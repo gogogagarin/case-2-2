@@ -1,0 +1,18 @@
+<style>
+  #banner {
+    height: 153px;
+    width: 100%;
+    object-fit:cover;
+    margin-bottom: 16px;
+  }
+</style>
+
+<img id="banner" src="https://case-2-2.jan-magnussen.repl.co/static/nemlig-case-billede.png" >
+
+
+
+<div class="d-flex justify-content-center">
+  <div class="p-2"><a href="{{ url_for('vare') }}">Vare</a></div>
+  <div class="p-2"><a href="{{ url_for('ordre') }}">Ordre</a></div>
+  <div class="p-2"><a href="{{ url_for('faktura') }}">Faktura</a></div>
+</div>
