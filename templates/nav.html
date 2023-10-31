@@ -1,21 +1,18 @@
-<nav class="navbar navbar-expand">
-<div class="container">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-    <strong>
-      <a class="d-inline-flex link-body-emphasis mt-2" style="color: #dd8241; font-size: 20px; font-style:800; text-decoration: none;" href="#">
-        <img src="static/Nemlig-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top mt-1">&nbsp;&nbsp;nemlig.com
+<nav class="navbar navbar-expand mb-2 mt-2">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="static/Nemlig-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top ">&nbsp;&nbsp;<strong style="color: #dd8241; font-weight: bold;">nemlig.com</strong>
       </a>
-    </strong>
-
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-      <li class="nav-item"><a href="{{ url_for('vare') }}" class="nav-link">Vare</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-    </ul>
-  </header>
-</div>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="nav nav-pills ml-auto">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="{{ url_for('vare') }}" class="nav-link">Vare</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-
-
