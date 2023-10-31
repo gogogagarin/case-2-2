@@ -1,39 +1,21 @@
-<nav class="navbar navbar-expand" aria-label="navbar">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand">
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <strong>
       <a class="d-inline-flex link-body-emphasis mt-2" style="color: #dd8241; font-size: 20px; font-style:800; text-decoration: none;" href="#">
         <img src="static/Nemlig-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top mt-1">&nbsp;&nbsp;nemlig.com
       </a>
     </strong>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample02">
-      <ul class="navbar-nav nav-underline me-auto">
-        <li class="nav-item ml-5">
-          <a style="color: #dd8241" class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="{{ url_for('vare') }}>
-            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
-            Vare
-          </a>
-        </li><li class="nav-item ml-4">
-          <a style="color: #dd8241" class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="{{ url_for('ordre') }}>
-            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
-            Ordre
-          </a>
-        </li>
-        <li class="nav-item ml-4">
-          <a style="color: #dd8241" class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="{{ url_for('faktura') }}>
-            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
-            Faktura
-          </a>
-        </li>
-        
-      </ul>
-      <!--- <form role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      </form> 
-      --->
-    </div>
-  </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="{{ url_for('vare') }}" class="nav-link">Vare</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+    </ul>
+  </header>
+</div>
 </nav>
+
+

@@ -1,23 +1,22 @@
 from flask import Flask, render_template, url_for
-
+from database import db_connection_string
 
 app = Flask(__name__)
 
+
 @app.route("/")
-def hello_jovian():
+def index():
   return render_template('home.html')
 
-@app.route("/vare")
+@app.route('/vare')
 def vare():
-  return render_template('vare.html')
+  cur = mysql.cursor(dictionary=True)
+  cur.execute("SELECT * FROM Vare WHERE Varetype = 'Cykel'")
+  data = cur.fetchall()
+  cur.close()
+  return render_template('var.html', cykler=data)
   
-@app.route("/ordre")
-def ordre():
-  return render_template('ordre.html')
-  
-@app.route("/faktura")
-def faktura():
-  return render_template('faktura.html')
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

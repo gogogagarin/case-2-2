@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Home</title>
+<title>Home</title>
   {% include 'bootstrap.html' %}
   
 </head>
@@ -9,9 +9,12 @@
   {% include 'nav.html' %}
   {% include 'header.html' %}
 
-<div class="text-center mt-4"><h1>Velkommen til Cykelbutikken</h1></div>
+  <div class="text-center mt-4"><h1>Velkommen til Cykelbutikken</h1></div>
+  <div class="container">
+    <div class="text-center mt-4"><h1>Velkommen til Cykelbutikken</h1></div>
+    {% block content %}{% endblock %}
+  </div>
 </body>
-
-  
+ 
   {% include 'footer.html' %}
 </html>
