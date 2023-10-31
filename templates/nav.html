@@ -1,12 +1,30 @@
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar navbar-expand " aria-label="Second navbar example">
   <div class="container-fluid">
-    <strong><a class="navbar-brand" style="color: #dd8241; font-size: 20px; font-style:800" href="#">
-      <img src="static/Nemlig-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-      nemlig.com
-    </a>
-      </strong>
-    <div class="p-2"><a style="color: #dd8241" href="{{ url_for('vare') }}">Vare</a></div>
-    <div class="p-2"><a style="color: #dd8241" href="{{ url_for('ordre') }}">Ordre</a></div>
-    <div class="p-2"><a style="color: #dd8241" href="{{ url_for('faktura') }}">Faktura</a></div>
+    <strong>
+      <a class="d-inline-flex link-body-emphasis text-decoration-none" style="color: #dd8241; font-size: 20px; font-style:800; text-decoration: none;" href="#">
+        <img src="static/Nemlig-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">&nbsp;&nbsp;nemlig.com&nbsp;&nbsp;&nbsp;&nbsp;
+      </a>
+    </strong>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a style="color: #dd8241" class="nav-link active" aria-current="page" href="{{ url_for('vare') }}">Vare</a>
+        </li>
+        <li class="nav-item">
+          <a style="color: #dd8241" class="nav-link" href="{{ url_for('vare') }}">Ordre</a>
+        </li>
+        <li class="nav-item">
+          <a style="color: #dd8241" class="nav-link" href="{{ url_for('faktura') }}">Faktura</a>
+        </li>
+      </ul>
+      <!--- <form role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form> 
+      --->
+    </div>
   </div>
 </nav>
