@@ -21,11 +21,12 @@
           <div class="p-1 px-4 flex-fill border border-1">Model</div>
           <div class="p-1 px-4 flex-fill border border-1">Pris</div>
       </div>
-    {% for del in tilbehor %}
+    {% for model in tilbehor %}
+
           <div class="d-flex lead d-inline-flex p-2 ">
-              <div class="p-2 flex-fill">{{ del.Maerke }}</div>
-              <div class="p-2 flex-fill">{{ del.Model }}</div>
-              <div class="p-2 flex-fill">{{ del.Pris|int }}</div>
+              <div class="p-2 flex-fill">{{ Maerke }}</div>
+              <div class="p-2 flex-fill">{{ Model }}</div>
+              <div class="p-2 flex-fill">{{ Pris|int }}</div>
           </div>
       {% endfor %}
   </div>
