@@ -1,0 +1,23 @@
+
+{% block title %}JENR Cykler - cykler{% endblock %}
+
+{% block content %}
+<h1>Cykelliste</h1>
+<table class="varetabel">
+    <thead>
+        <tr>
+            <th>Mærke</th>
+            <th>Model</th>
+            <th>Pris (DKK)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cykel in cykler %}
+        <tr>
+            <td>{{ cykel.Maerke }}</td>
+            <td>{{ cykel.Model }}</td>
+            <td>{{ '{:,.0f}'.format(cykel.Pris).replace(',', '.') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

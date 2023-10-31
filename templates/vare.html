@@ -1,27 +1,36 @@
 <!doctype html>
 <html>
 <head>
+    {% include 'bootstrap.html' %}
     <title>Vare</title>
+
 
 	
 </head>
 <body>
-{% block content %}
-<h1>Vare</h1>
+  {% include 'nav.html' %}
+  <div class="d-flex justify-content-center">
 
-<div class="table-container">
-<div class="d-flex lead">
-    <div class="table-cell">Vare</div>
-    <div class="table-cell">Model</div>
-    <div class="table-cell">Pris</div>
-</div>
-  {% for del in tilbehor %}
-    <div class="d-flex">
-      <div class="table-cell">{{ del.Maerke }}</div>
-      <div class="table-cell">{{ del.Model }}</div>
-      <div class="table-cell">{{ del.Pris }}</div>
+  <h1>Cykelliste</h1><br>
+  </div>
+  <div class="d-flex justify-content-center">
+
+  <div class="">
+      <div class="d-flex lead d-inline-flex p-2 ">
+          <div class="p-1 px-4 flex-fill border border-1">Varetype</div>
+          <div class="p-1 px-4 flex-fill border border-1">Model</div>
+          <div class="p-1 px-4 flex-fill border border-1">Pris</div>
+      </div>
+    {% for del in tilbehor %}
+          <div class="d-flex lead d-inline-flex p-2 ">
+              <div class="p-2 flex-fill">{{ del.Maerke }}</div>
+              <div class="p-2 flex-fill">{{ del.Model }}</div>
+              <div class="p-2 flex-fill">{{ del.Pris|int }}</div>
+          </div>
+      {% endfor %}
+  </div>
     </div>
-{% endfor %}
-{% endblock %}
+
 </body>
+  {% include 'footer.html' %}
 </html>

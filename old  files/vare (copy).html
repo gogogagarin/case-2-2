@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Vare</title>
+
+	
+</head>
+<body>
+{% block content %}
+<h1>Vare</h1>
+
+<div class="table-container">
+<div class="d-flex lead">
+    <div class="table-cell">Vare</div>
+    <div class="table-cell">Model</div>
+    <div class="table-cell">Pris</div>
+</div>
+  {% for del in tilbehor %}
+    <div class="d-flex">
+      <div class="table-cell">{{ del.Maerke }}</div>
+      <div class="table-cell">{{ del.Model }}</div>
+      <div class="table-cell">{{ del.Pris }}</div>
+    </div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
