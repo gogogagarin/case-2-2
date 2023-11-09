@@ -13,7 +13,6 @@ def index():
 @app.route("/vare")
 def vare():
   data = database.execute_query('SELECT * FROM gruppe3_nemlig.Vare')
-  print(data)
   return render_template('vare.html', data=data)
 
 
