@@ -1,6 +1,5 @@
 # Import the necessary modules
 from flask import Flask, render_template, url_for
-import mysql.connector
 import database
 
 # Create a new Flask web server
