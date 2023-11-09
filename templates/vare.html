@@ -1,40 +1,51 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Include some CSS to style the table -->
   <style>
     td {
       padding-right: 40px;
     }
   </style>
-    {% include 'bootstrap.html' %}
-    <title>Vare</title>
+  <!-- Include Bootstrap and set the title of the page -->
+  {% include 'bootstrap.html' %}
+  <title>Vare</title>
 </head>
 <body>
+  <!-- Include the navigation bar -->
   {% include 'nav.html' %}
   <div class="d-flex justify-content-center">
+    <!-- Display a heading -->
     <h1>Vareliste</h1><br>
   </div>
   <div class="d-flex justify-content-center">
     <div class="">
       <div class="d-flex lead d-inline-flex p-2 ">
+        <!-- Create a table -->
         <table>
+          <!-- Create the header row of the table -->
           <tr>
             <th>Vare</th>
             <th>Kategori</th>
             <th>Øko</th>
             <th>Pris</th>
           </tr>
+          <!-- Loop over each item in the data list -->
           {% for item in data %}
+          <!-- Create a row for each item -->
           <tr>
             <td>{{ item[1] }} </td>
             <td>{{ item[7] }} </td>
+            <!-- Use a conditional statement to display 'ja' or 'nej' -->
             <td> {% if item[6] == true %} ja {% else %} nej {% endif %} </td>
             <td>{{ item[3] }}kr.</td>
           </tr>
           {% endfor %}
         </table>
-
+      </div>
+    </div>
   </div>
+  <!-- Include the footer -->
+  {% include 'footer.html' %}
 </body>
-{% include 'footer.html' %}
 </html>
