@@ -1,37 +1,40 @@
 <!doctype html>
 <html>
 <head>
+  <style>
+    td {
+      padding-right: 40px;
+    }
+  </style>
     {% include 'bootstrap.html' %}
     <title>Vare</title>
-
-
-	
 </head>
 <body>
   {% include 'nav.html' %}
   <div class="d-flex justify-content-center">
-
-  <h1>Cykelliste</h1><br>
+    <h1>Vareliste</h1><br>
   </div>
   <div class="d-flex justify-content-center">
-
-  <div class="">
+    <div class="">
       <div class="d-flex lead d-inline-flex p-2 ">
-          <div class="p-1 px-4 flex-fill border border-1">Varetype</div>
-          <div class="p-1 px-4 flex-fill border border-1">Model</div>
-          <div class="p-1 px-4 flex-fill border border-1">Pris</div>
-      </div>
-    {% for model in tilbehor %}
+        <table>
+          <tr>
+            <th>Vare</th>
+            <th>Kategori</th>
+            <th>Øko</th>
+            <th>Pris</th>
+          </tr>
+          {% for item in data %}
+          <tr>
+            <td>{{ item[1] }} </td>
+            <td>{{ item[7] }} </td>
+            <td> {% if item[6] == true %} ja {% else %} nej {% endif %} </td>
+            <td>{{ item[3] }}kr.</td>
+          </tr>
+          {% endfor %}
+        </table>
 
-          <div class="d-flex lead d-inline-flex p-2 ">
-              <div class="p-2 flex-fill">{{ Maerke }}</div>
-              <div class="p-2 flex-fill">{{ Model }}</div>
-              <div class="p-2 flex-fill">{{ Pris|int }}</div>
-          </div>
-      {% endfor %}
   </div>
-    </div>
-
 </body>
-  {% include 'footer.html' %}
+{% include 'footer.html' %}
 </html>

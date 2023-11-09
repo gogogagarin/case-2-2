@@ -1,17 +1,15 @@
-from sqlalchemy import create_engine, text
-import os
 import mysql.connector
+import os
 
 
-db_connection_string = os.environ['DB_CONNECTION_STRING']
-
-engine = create_engine(
-  db_connection_string, 
-  echo=True)
-
-# PyMySQL
-with engine.connect() as conn:
-  result = conn.execute(text("SELECT * FROM case22.Vare"))
-  print(result.fetchall())
-
-
+def execute_query(text):
+  db = mysql.connector.connect(host='gateway01.us-west-2.prod.aws.tidbcloud.com',
+                               port='4000',
+                               user='3aHUY11sUPdpx1P.root',
+                               password=os.environ['PW'],
+                               database='gruppe3_nemlig')
+  cur = db.cursor()
+  cur.execute(text)
+  data = cur.fetchall()
+  cur.close()
+  return data
