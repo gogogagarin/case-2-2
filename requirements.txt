@@ -2,4 +2,3 @@ Flask
 gunicorn
 mysql 
 mysql-connector-python
-os
